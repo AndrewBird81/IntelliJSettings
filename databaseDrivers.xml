@@ -1,49 +1,17 @@
 <application>
   <component name="LocalDatabaseDriverManager" version="141+">
-    <driver id="517530db-9e49-4a36-bbc0-e2193c33334c" name="DB2 (LUW) (JDBC3)" dialect="DB2" driver-class="COM.ibm.db2os390.sqlj.jdbc.DB2SQLJDriver" icon="AllIcons.Providers.Ibm">
-      <artifact name="DB2" />
-      <url-template name="Type 2" template="jdbc:db2:{database::database}[:&lt;;,user={user},password={password},{:identifier}={:identifier}&gt;;]" />
-      <url-template name="Type 4" template="jdbc:db2[:net]://{host::localhost}[:{port::50000}][/{database}][:&lt;;,user={user},password={password},{:identifier}={:identifier}&gt;;]" />
-      <option name="auto-sync" value="false" />
-      <option name="auto-commit" value="true" />
-      <property name="retrieveMessagesFromServerOnGetMessage" value="true" />
-      <library>
-        <url>file://C:/dev/Tomcat/apache-tomcat-8.0.28/lib/db2jcc-1.8.5.jar</url>
-      </library>
-      <library>
-        <url>file://C:/dev/Tomcat/apache-tomcat-8.0.28/lib/db2jcc_license_cisuz-1.8.5.jar</url>
-      </library>
-      <library>
-        <url>file://C:/dev/Tomcat/apache-tomcat-8.0.28/lib/db2jcc_license_cu-1.8.5.jar</url>
-      </library>
-    </driver>
-    <driver id="hsqldb.local" name="HSQLDB (Local)" dialect="HSQLDB">
+    <driver id="h2.unified" name="H2" dialect="H2">
       <option name="auto-sync" value="true" />
-    </driver>
-    <driver id="sybase.ase" name="Sybase (Native)" dialect="Sybase">
-      <option name="auto-sync" value="false" />
-    </driver>
-    <driver id="sybase.jtds" name="Sybase (jTds)" dialect="Sybase">
-      <option name="auto-sync" value="false" />
-    </driver>
-    <driver id="postgresql" name="PostgreSQL" dialect="PostgreSQL">
-      <option name="auto-sync" value="true" />
-    </driver>
-    <driver id="sqlserver.ms" name="SQL Server (Microsoft)" dialect="TSQL">
-      <option name="auto-sync" value="false" />
     </driver>
     <driver id="oracle" name="Oracle" dialect="Oracle">
       <option name="auto-sync" value="false" />
       <option name="auto-commit" value="false" />
     </driver>
-    <driver id="odbc.sun" name="ODBC">
-      <option name="auto-sync" value="true" />
-    </driver>
     <driver id="derby.embedded" name="Derby (Embedded)" dialect="Derby">
       <option name="auto-sync" value="true" />
     </driver>
-    <driver id="derby.remote" name="Derby (Remote)" dialect="Derby">
-      <option name="auto-sync" value="true" />
+    <driver id="sybase.jtds" name="Sybase (jTds)" dialect="Sybase">
+      <option name="auto-sync" value="false" />
     </driver>
     <driver id="09c13414-5817-4da6-9efd-88cc98213cd2" name="DB2 (LUW) (JDBC4)" dialect="DB2" driver-class="com.ibm.db2.jcc.DB2Driver" icon="AllIcons.Providers.Ibm">
       <artifact name="DB2" />
@@ -65,14 +33,39 @@
         <url>file://C:/dev/Tomcat/apache-tomcat-8.0.28/lib/db2jcc_license_cu-1.8.5.jar</url>
       </library>
     </driver>
-    <driver id="h2.unified" name="H2" dialect="H2">
+    <driver id="sqlserver.jtds" name="SQL Server (jTds)" dialect="TSQL">
+      <option name="auto-sync" value="false" />
+    </driver>
+    <driver id="hsqldb.local" name="HSQLDB (Local)" dialect="HSQLDB">
       <option name="auto-sync" value="true" />
     </driver>
-    <driver id="db2.jtopen" name="DB2 (JTOpen)" dialect="DB2">
+    <driver id="517530db-9e49-4a36-bbc0-e2193c33334c" name="DB2 (LUW) (JDBC3)" dialect="DB2" driver-class="COM.ibm.db2os390.sqlj.jdbc.DB2SQLJDriver" icon="AllIcons.Providers.Ibm">
+      <artifact name="DB2" />
+      <url-template name="Type 2" template="jdbc:db2:{database::database}[:&lt;;,user={user},password={password},{:identifier}={:identifier}&gt;;]" />
+      <url-template name="Type 4" template="jdbc:db2[:net]://{host::localhost}[:{port::50000}][/{database}][:&lt;;,user={user},password={password},{:identifier}={:identifier}&gt;;]" />
       <option name="auto-sync" value="false" />
-      <property name="prompt" value="false" />
+      <option name="auto-commit" value="true" />
+      <property name="retrieveMessagesFromServerOnGetMessage" value="true" />
+      <library>
+        <url>file://C:/dev/Tomcat/apache-tomcat-8.0.28/lib/db2jcc4-4.9.78.jar</url>
+      </library>
+      <library>
+        <url>file://C:/dev/Tomcat/apache-tomcat-8.0.28/lib/db2jcc_license_cisuz-1.8.5.jar</url>
+      </library>
+      <library>
+        <url>file://C:/dev/Tomcat/apache-tomcat-8.0.28/lib/db2jcc_license_cu-1.8.5.jar</url>
+      </library>
     </driver>
-    <driver id="hsqldb.remote" name="HSQLDB (Remote)" dialect="HSQLDB">
+    <driver id="derby.remote" name="Derby (Remote)" dialect="Derby">
+      <option name="auto-sync" value="true" />
+    </driver>
+    <driver id="sqlite.xerial" name="Sqlite (Xerial)" dialect="SQLite">
+      <option name="auto-sync" value="true" />
+    </driver>
+    <driver id="sybase.ase" name="Sybase (Native)" dialect="Sybase">
+      <option name="auto-sync" value="false" />
+    </driver>
+    <driver id="postgresql" name="PostgreSQL" dialect="PostgreSQL">
       <option name="auto-sync" value="true" />
     </driver>
     <driver id="db2" name="DB2 (LUW)" dialect="DB2">
@@ -85,11 +78,12 @@
         <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/db2jcc4-4.9.78.jar</url>
       </library>
     </driver>
-    <driver id="sqlserver.jtds" name="SQL Server (jTds)" dialect="TSQL">
+    <driver id="sqlserver.ms" name="SQL Server (Microsoft)" dialect="TSQL">
       <option name="auto-sync" value="false" />
     </driver>
-    <driver id="sqlite.xerial" name="Sqlite (Xerial)" dialect="SQLite">
-      <option name="auto-sync" value="true" />
+    <driver id="db2.jtopen" name="DB2 (JTOpen)" dialect="DB2">
+      <option name="auto-sync" value="false" />
+      <property name="prompt" value="false" />
     </driver>
     <driver id="mysql" name="MySQL" dialect="MySQL">
       <option name="auto-sync" value="true" />
@@ -99,6 +93,9 @@
       <property name="characterEncoding" value="utf8" />
       <property name="characterSetResults" value="utf8" />
       <property name="yearIsDateType" value="false" />
+    </driver>
+    <driver id="hsqldb.remote" name="HSQLDB (Remote)" dialect="HSQLDB">
+      <option name="auto-sync" value="true" />
     </driver>
   </component>
 </application>
