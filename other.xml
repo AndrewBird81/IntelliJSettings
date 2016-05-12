@@ -34,12 +34,14 @@
   <component name="SvnApplicationSettings">
     <option name="myCheckoutURLs">
       <list>
+        <option value="https://svnrepo/svn/StagedReleases" />
         <option value="https://svnrepo/svn/ICD" />
         <option value="https://svnrepo/svn/ICD2" />
       </list>
     </option>
     <option name="myTypedURLs">
       <list>
+        <option value="https://svnrepo/svn/StagedReleases" />
         <option value="https://svnrepo/svn/ICD" />
         <option value="http://svnrepo/svn/ICD" />
         <option value="https://svnrepo/svn/ICD2" />
