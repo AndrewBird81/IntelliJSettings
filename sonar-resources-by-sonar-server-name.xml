@@ -1,0 +1,18 @@
+<application>
+  <component name="sonar-resources-application-component">
+    <option name="sonarResourcesBySonarServerName">
+      <map>
+        <entry key="Local Sonar">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="Local SonarQube">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</application>
