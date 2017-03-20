@@ -4,8 +4,9 @@
       <list>
         <SonarQubeServer>
           <option name="hostUrl" value="http://localhost:9000" />
-          <token />
           <option name="name" value="local" />
+          <option name="login" value="admin" />
+          <password>dfcbdfcedfc7dfc3dfc4</password>
         </SonarQubeServer>
       </list>
     </option>
