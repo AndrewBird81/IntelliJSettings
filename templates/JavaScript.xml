@@ -11,4 +11,10 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
+  <template name="controller" value="class $CONTROLLER_NAME$ {&#10;  $END$&#10;}&#10;&#10;$CONTROLLER_NAME$.$inject = [];&#10;&#10;export default $CONTROLLER_NAME$;&#10;" description="Angular Controller class" toReformat="false" toShortenFQNames="true">
+    <variable name="CONTROLLER_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
 </templateSet>
