@@ -1,6 +1,13 @@
 <keymap version="1" name="Eclipse (Mac OS X) copy" parent="Eclipse (Mac OS X)">
+  <action id="InsertLiveTemplate">
+    <keyboard-shortcut first-keystroke="ctrl j" />
+  </action>
   <action id="Replace">
     <keyboard-shortcut first-keystroke="meta f" />
+  </action>
+  <action id="SurroundWithLiveTemplate">
+    <keyboard-shortcut first-keystroke="meta alt j" />
+    <keyboard-shortcut first-keystroke="ctrl alt j" />
   </action>
   <action id="SwitchApply">
     <keyboard-shortcut first-keystroke="ctrl alt enter" />
