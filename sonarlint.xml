@@ -3,10 +3,10 @@
     <option name="sonarQubeServers">
       <list>
         <SonarQubeServer>
-          <option name="hostUrl" value="http://localhost:8000" />
-          <option name="name" value="local" />
-          <option name="login" value="admin" />
-          <password>dfcbdfcedfc7dfc3dfc4</password>
+          <option name="hostUrl" value="http://10.245.88.217:9000/" />
+          <token>df9edfcfdfccdf9cdf98dfc8dfc9df9bdf9edf9fdf9cdfcfdfc8dfcedfc8df93df9fdf92df9adf93df9adf9fdf9edf9cdfcedfcedf9edfcfdf99dfcfdfc9df98df9fdf9edfc8dfcbdf9edf9bdfc8dfcb</token>
+          <option name="name" value="AMS SonarQube" />
+          <organizationKey>default-organization</organizationKey>
         </SonarQubeServer>
       </list>
     </option>
