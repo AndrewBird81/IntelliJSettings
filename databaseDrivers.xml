@@ -1,11 +1,26 @@
 <application>
   <component name="LocalDatabaseDriverManager" version="163">
-    <driver id="exasol">
-      <artifact name="Exasol" use="true" />
+    <driver id="db2">
+      <artifact name="DB2" use="true">
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/db2-driver-license.txt</url>
+        </library>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/db2jcc4-4.9.78.jar</url>
+        </library>
+      </artifact>
+      <option name="auto-sync" value="false" />
+    </driver>
+    <driver id="db2.jtopen">
+      <artifact name="JTOpen (DB2 iSeries)" use="true" />
+      <option name="auto-sync" value="false" />
+    </driver>
+    <driver id="derby.remote">
+      <artifact name="Apache Derby" use="true" />
       <option name="auto-sync" value="true" />
     </driver>
-    <driver id="h2.unified">
-      <artifact name="H2" use="true" />
+    <driver id="derby.embedded">
+      <artifact name="Apache Derby" use="true" />
       <option name="auto-sync" value="true" />
     </driver>
     <driver id="azure.ms">
@@ -13,18 +28,73 @@
       <option name="auto-sync" value="true" />
       <option name="send-app-info" value="false" />
     </driver>
+    <driver id="sqlserver.ms">
+      <artifact name="SQL Server" use="true" />
+      <option name="auto-sync" value="false" />
+      <option name="send-app-info" value="false" />
+    </driver>
+    <driver id="sqlserver.jtds">
+      <artifact name="jTDS (SQL Server and Sybase)" use="true" />
+      <option name="auto-sync" value="false" />
+    </driver>
+    <driver id="sybase.jtds">
+      <artifact name="jTDS (SQL Server and Sybase)" use="true" />
+      <option name="auto-sync" value="false" />
+    </driver>
+    <driver id="sybase.ase">
+      <option name="auto-sync" value="false" />
+    </driver>
+    <driver id="mysql">
+      <artifact name="MySQL Connector/J" use="true" version="5.1.45" />
+      <option name="auto-sync" value="true" />
+      <option name="auto-commit" value="true" />
+      <option name="send-app-info" value="true" />
+    </driver>
+    <driver id="mariadb">
+      <artifact name="MariaDB Connector J" use="true" />
+      <option name="auto-sync" value="true" />
+    </driver>
     <driver id="oracle">
       <artifact name="Oracle" use="true" />
       <option name="auto-sync" value="false" />
       <option name="auto-commit" value="false" />
     </driver>
-    <driver id="derby.embedded">
-      <artifact name="Apache Derby" use="true" />
+    <driver id="postgresql">
+      <artifact name="PostgreSQL" use="true" version="42.2.2" />
+      <option name="auto-sync" value="true" />
+      <option name="schema-control" value="MANUAL" />
+      <option name="auto-commit" value="true" />
+      <option name="send-app-info" value="true" />
+      <code-style-scheme-name>Default</code-style-scheme-name>
+    </driver>
+    <driver id="redshift">
+      <artifact name="Redshift" use="true" />
+      <option name="auto-sync" value="true" />
+      <option name="schema-control" value="MANUAL" />
+    </driver>
+    <driver id="hsqldb.remote">
+      <artifact name="HSQLDB" use="true" />
       <option name="auto-sync" value="true" />
     </driver>
-    <driver id="sybase.jtds">
-      <artifact name="jTDS (SQL Server and Sybase)" use="true" />
-      <option name="auto-sync" value="false" />
+    <driver id="hsqldb.local">
+      <artifact name="HSQLDB" use="true" />
+      <option name="auto-sync" value="true" />
+    </driver>
+    <driver id="h2.unified">
+      <artifact name="H2" use="true" />
+      <option name="auto-sync" value="true" />
+    </driver>
+    <driver id="sqlite.xerial">
+      <artifact name="Xerial SQLiteJDBC" use="true" />
+      <option name="auto-sync" value="true" />
+    </driver>
+    <driver id="exasol">
+      <artifact name="Exasol" use="true" />
+      <option name="auto-sync" value="true" />
+    </driver>
+    <driver id="clickhouse">
+      <artifact name="ClickHouse" use="true" />
+      <option name="auto-sync" value="true" />
     </driver>
     <driver id="09c13414-5817-4da6-9efd-88cc98213cd2" name="DB2 (LUW) (JDBC4)" dialect="DB2" driver-class="com.ibm.db2.jcc.DB2Driver" icon="AllIcons.Providers.Ibm">
       <url-template name="Type 2" template="jdbc:db2:{database::database}[:&lt;;,user={user},password={password},{:identifier}={:identifier}&gt;;]" />
@@ -47,14 +117,6 @@
         <url>file://C:/dev/Tomcat/apache-tomcat-8.0.28/lib/db2jcc_license_cu-1.8.5.jar</url>
       </library>
     </driver>
-    <driver id="sqlserver.jtds">
-      <artifact name="jTDS (SQL Server and Sybase)" use="true" />
-      <option name="auto-sync" value="false" />
-    </driver>
-    <driver id="hsqldb.local">
-      <artifact name="HSQLDB" use="true" />
-      <option name="auto-sync" value="true" />
-    </driver>
     <driver id="517530db-9e49-4a36-bbc0-e2193c33334c" name="DB2 (LUW) (JDBC3)" dialect="DB2" driver-class="COM.ibm.db2os390.sqlj.jdbc.DB2SQLJDriver" icon="AllIcons.Providers.Ibm">
       <url-template name="Type 2" template="jdbc:db2:{database::database}[:&lt;;,user={user},password={password},{:identifier}={:identifier}&gt;;]" />
       <url-template name="Type 4" template="jdbc:db2[:net]://{host::localhost}[:{port::50000}][/{database}][:&lt;;,user={user},password={password},{:identifier}={:identifier}&gt;;]" />
@@ -71,55 +133,6 @@
       <library>
         <url>file://C:/dev/Tomcat/apache-tomcat-8.0.28/lib/db2jcc_license_cu-1.8.5.jar</url>
       </library>
-    </driver>
-    <driver id="derby.remote">
-      <artifact name="Apache Derby" use="true" />
-      <option name="auto-sync" value="true" />
-    </driver>
-    <driver id="sqlite.xerial">
-      <artifact name="Xerial SQLiteJDBC" use="true" />
-      <option name="auto-sync" value="true" />
-    </driver>
-    <driver id="sybase.ase">
-      <option name="auto-sync" value="false" />
-    </driver>
-    <driver id="postgresql">
-      <artifact name="PostgreSQL" use="true" />
-      <option name="auto-sync" value="true" />
-    </driver>
-    <driver id="redshift">
-      <artifact name="Redshift" use="true" />
-      <option name="auto-sync" value="true" />
-    </driver>
-    <driver id="db2">
-      <artifact name="DB2" use="true">
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/db2-driver-license.txt</url>
-        </library>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/db2jcc4-4.9.78.jar</url>
-        </library>
-      </artifact>
-      <option name="auto-sync" value="false" />
-    </driver>
-    <driver id="sqlserver.ms">
-      <artifact name="SQL Server" use="true" />
-      <option name="auto-sync" value="false" />
-      <option name="send-app-info" value="false" />
-    </driver>
-    <driver id="db2.jtopen">
-      <artifact name="JTOpen (DB2 iSeries)" use="true" />
-      <option name="auto-sync" value="false" />
-    </driver>
-    <driver id="mysql">
-      <artifact name="MySQL Connector/J" use="true" version="5.1.45" />
-      <option name="auto-sync" value="true" />
-      <option name="auto-commit" value="true" />
-      <option name="send-app-info" value="true" />
-    </driver>
-    <driver id="hsqldb.remote">
-      <artifact name="HSQLDB" use="true" />
-      <option name="auto-sync" value="true" />
     </driver>
   </component>
 </application>
