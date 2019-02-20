@@ -1,6 +1,8 @@
 <application>
   <component name="FileTypeManager" version="17">
     <extensionMap>
+      <mapping ext="klib" type="ARCHIVE" />
+      <removed_mapping pattern=".editorconfig" type="EditorConfig" />
       <mapping pattern="Jenkinsfile" type="Groovy" />
       <mapping pattern=".gitkeep" type="PLAIN_TEXT" />
       <mapping pattern="Procfile" type="PLAIN_TEXT" />
@@ -9,6 +11,7 @@
       <mapping ext="lock" type="PLAIN_TEXT" />
       <mapping ext="eot" type="PLAIN_TEXT" />
       <mapping ext="woff" type="PLAIN_TEXT" />
+      <removed_mapping pattern=".editorconfig" type="EditorConfig" />
     </extensionMap>
   </component>
 </application>
